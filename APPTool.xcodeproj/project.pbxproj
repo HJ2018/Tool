@@ -11,7 +11,6 @@
 		A954BCB921192D57006A147F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A954BCB821192D57006A147F /* AppDelegate.m */; };
 		A954BCBC21192D57006A147F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A954BCBB21192D57006A147F /* ViewController.m */; };
 		A954BCBF21192D57006A147F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A954BCBD21192D57006A147F /* Main.storyboard */; };
-		A954BCC121192D58006A147F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A954BCC021192D58006A147F /* Assets.xcassets */; };
 		A954BCC421192D58006A147F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A954BCC221192D58006A147F /* LaunchScreen.storyboard */; };
 		A954BCC721192D58006A147F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A954BCC621192D58006A147F /* main.m */; };
 		A954BD3521192DE5006A147F /* YYHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A954BCD121192DE5006A147F /* YYHttpTool.m */; };
@@ -64,6 +63,10 @@
 		A954BE0321193CEB006A147F /* NSArray+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A954BDE621193CEA006A147F /* NSArray+Category.m */; };
 		A954BE0421193CEB006A147F /* NSArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = A954BDEA21193CEA006A147F /* NSArray+Safe.m */; };
 		A954BE0521193CEB006A147F /* NSData+CommonCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = A954BDEC21193CEA006A147F /* NSData+CommonCryptor.m */; };
+		A954BE0D211948BD006A147F /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = A954BE0B211948BD006A147F /* placeholder.png */; };
+		A954BE0E211948BD006A147F /* XRCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = A954BE0C211948BD006A147F /* XRCarouselView.m */; };
+		A954BE1021194D4D006A147F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A954BE0F21194D4D006A147F /* Assets.xcassets */; };
+		A954BE1F21195626006A147F /* UIBarButtonItem+HJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A954BE1D21195626006A147F /* UIBarButtonItem+HJExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,7 +78,6 @@
 		A954BCBA21192D57006A147F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A954BCBB21192D57006A147F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A954BCBE21192D57006A147F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A954BCC021192D58006A147F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A954BCC321192D58006A147F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A954BCC521192D58006A147F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A954BCC621192D58006A147F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -181,6 +183,12 @@
 		A954BDEA21193CEA006A147F /* NSArray+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Safe.m"; sourceTree = "<group>"; };
 		A954BDEC21193CEA006A147F /* NSData+CommonCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CommonCryptor.m"; sourceTree = "<group>"; };
 		A954BDED21193CEA006A147F /* NSData+CommonCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CommonCryptor.h"; sourceTree = "<group>"; };
+		A954BE0A211948BD006A147F /* XRCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRCarouselView.h; sourceTree = "<group>"; };
+		A954BE0B211948BD006A147F /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		A954BE0C211948BD006A147F /* XRCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRCarouselView.m; sourceTree = "<group>"; };
+		A954BE0F21194D4D006A147F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A954BE1D21195626006A147F /* UIBarButtonItem+HJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+HJExtension.m"; sourceTree = "<group>"; };
+		A954BE1E21195626006A147F /* UIBarButtonItem+HJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+HJExtension.h"; sourceTree = "<group>"; };
 		ECC3A82D7302A7DF68AE8B99 /* Pods-APPTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APPTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-APPTool/Pods-APPTool.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -240,8 +248,8 @@
 				A954BCBA21192D57006A147F /* ViewController.h */,
 				A954BCBB21192D57006A147F /* ViewController.m */,
 				A954BCBD21192D57006A147F /* Main.storyboard */,
-				A954BCC021192D58006A147F /* Assets.xcassets */,
 				A954BCC221192D58006A147F /* LaunchScreen.storyboard */,
+				A954BE0F21194D4D006A147F /* Assets.xcassets */,
 				A954BCC521192D58006A147F /* Info.plist */,
 				A954BCC621192D58006A147F /* main.m */,
 			);
@@ -251,6 +259,7 @@
 		A954BCCD21192DE5006A147F /* ToolAPP */ = {
 			isa = PBXGroup;
 			children = (
+				A954BE0821194870006A147F /* 简单好用的控件封装 */,
 				A954BE0721194032006A147F /* 实用 */,
 				A954BE0621194007006A147F /* GitHub */,
 			);
@@ -560,6 +569,7 @@
 		A954BE0721194032006A147F /* 实用 */ = {
 			isa = PBXGroup;
 			children = (
+				A954BE1C21195613006A147F /* UIButton */,
 				A954BCCE21192DE5006A147F /* 网络请求工具类 */,
 				A954BCD321192DE5006A147F /* 坐标转换 */,
 				A954BCD621192DE5006A147F /* 分数或者星星 */,
@@ -571,6 +581,33 @@
 				A954BD2D21192DE5006A147F /* 时间类 */,
 			);
 			path = "实用";
+			sourceTree = "<group>";
+		};
+		A954BE0821194870006A147F /* 简单好用的控件封装 */ = {
+			isa = PBXGroup;
+			children = (
+				A954BE09211948BD006A147F /* XRCarouselView */,
+			);
+			path = "简单好用的控件封装";
+			sourceTree = "<group>";
+		};
+		A954BE09211948BD006A147F /* XRCarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				A954BE0B211948BD006A147F /* placeholder.png */,
+				A954BE0A211948BD006A147F /* XRCarouselView.h */,
+				A954BE0C211948BD006A147F /* XRCarouselView.m */,
+			);
+			path = XRCarouselView;
+			sourceTree = "<group>";
+		};
+		A954BE1C21195613006A147F /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				A954BE1E21195626006A147F /* UIBarButtonItem+HJExtension.h */,
+				A954BE1D21195626006A147F /* UIBarButtonItem+HJExtension.m */,
+			);
+			path = UIButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -633,7 +670,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A954BCC421192D58006A147F /* LaunchScreen.storyboard in Resources */,
-				A954BCC121192D58006A147F /* Assets.xcassets in Resources */,
+				A954BE0D211948BD006A147F /* placeholder.png in Resources */,
+				A954BE1021194D4D006A147F /* Assets.xcassets in Resources */,
 				A954BCBF21192D57006A147F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -706,6 +744,7 @@
 				A954BDF121193CEB006A147F /* NSString+Safe.m in Sources */,
 				A954BD5B21192DE5006A147F /* NSDate+Convert.m in Sources */,
 				A954BD4321192DE5006A147F /* XMGNoticeLocal.m in Sources */,
+				A954BE0E211948BD006A147F /* XRCarouselView.m in Sources */,
 				A954BD3B21192DE5006A147F /* NSObject+Log.m in Sources */,
 				A954BCC721192D58006A147F /* main.m in Sources */,
 				A954BD3F21192DE5006A147F /* UIImageView+XMGExtension.m in Sources */,
@@ -727,6 +766,7 @@
 				A954BD5C21192DE5006A147F /* NSDate+Format.m in Sources */,
 				A954BD3821192DE5006A147F /* WSStarRatingView.m in Sources */,
 				A954BD4121192DE5006A147F /* XMGDeviceMessage.m in Sources */,
+				A954BE1F21195626006A147F /* UIBarButtonItem+HJExtension.m in Sources */,
 				A954BDF221193CEB006A147F /* NSString+Category.m in Sources */,
 				A954BE0121193CEB006A147F /* NSObject+Category.m in Sources */,
 				A954BDF521193CEB006A147F /* NSString+MD5.m in Sources */,

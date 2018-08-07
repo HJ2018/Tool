@@ -9,10 +9,12 @@
 #import "ViewController.h"
 #import "WSStarRatingView.h"
 #import "UIView+Category.h"
+#import "XRCarouselView.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet WSStarRatingView *wssVIew;
 @property (weak, nonatomic) IBOutlet UIView *AnimationView;
+@property (weak, nonatomic) IBOutlet XRCarouselView *XRCarView;
 
 @end
 
@@ -23,6 +25,9 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(Next)];
+    
+    
     [self.wssVIew setScore:0.5 withAnimation:YES];
     
     
@@ -30,12 +35,23 @@
         
         [self.AnimationView shakeAnimation];
     });
+    
+    
+    [self photos];
+    
 }
 
+-(void)photos{
+    
+    //本地图片
+    NSArray *arr1 = @[[UIImage imageNamed:@"1.jpg"], [UIImage imageNamed:@"2.jpg"], [UIImage imageNamed:@"3.jpg"]];
+    self.XRCarView.imageArray = arr1;
+    self.XRCarView.time = 2;
+}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)Next
+{
+    
 }
 
 
