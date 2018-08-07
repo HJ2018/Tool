@@ -6,7 +6,8 @@ target 'APPTool' do
    use_frameworks!
 
   pod 'SDWebImage'
- pod 'AFNetworking', '~> 3.2.1'
+  pod 'AFNetworking', '~> 3.2.1'
+   pod 'WRNavigationBar', '~> 1.2.0'
   # Pods for APPTool
 
 end

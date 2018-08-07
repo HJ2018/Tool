@@ -17,20 +17,24 @@ PODS:
   - SDWebImage (4.4.1):
     - SDWebImage/Core (= 4.4.1)
   - SDWebImage/Core (4.4.1)
+  - WRNavigationBar (1.2.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.2.1)
   - SDWebImage
+  - WRNavigationBar (~> 1.2.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - SDWebImage
+    - WRNavigationBar
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
+  WRNavigationBar: dc952230effbb646785f962587caaac06c60f229
 
-PODFILE CHECKSUM: e6d34ca6126b052d4d76312418bf53ef7396e07d
+PODFILE CHECKSUM: 4ddae5c04c9a05c324d4df28261e129be0eb8165
 
 COCOAPODS: 1.5.0

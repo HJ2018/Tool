@@ -21,4 +21,6 @@
 - (void)layDownAnimation;    //从上往下展开
 - (void)roteAnimation;       //翻转动画
 
+- (UITableViewCell *)roteAnimation:(UITableView *)tableview indexText:(NSIndexPath *)index;       //翻转动画
+
 @end

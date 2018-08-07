@@ -10,6 +10,7 @@
 #import "WSStarRatingView.h"
 #import "UIView+Category.h"
 #import "XRCarouselView.h"
+#import "NavController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet WSStarRatingView *wssVIew;
@@ -25,9 +26,11 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(Next)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(Next)];
     
-    
+    /**
+     更多用法看代码
+     */
     [self.wssVIew setScore:0.5 withAnimation:YES];
     
     
@@ -42,7 +45,9 @@
 }
 
 -(void)photos{
-    
+    /**
+     更多用法看代码
+     */
     //本地图片
     NSArray *arr1 = @[[UIImage imageNamed:@"1.jpg"], [UIImage imageNamed:@"2.jpg"], [UIImage imageNamed:@"3.jpg"]];
     self.XRCarView.imageArray = arr1;
@@ -51,7 +56,7 @@
 
 -(void)Next
 {
-    
+    [self.navigationController pushViewController:[NavController new] animated:YES];
 }
 
 

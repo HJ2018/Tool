@@ -7,6 +7,7 @@
 //
 
 #import "UITableView+CellAnimation.h"
+#import "Base.h"
 
 #define XS_SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
 #define XS_SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
@@ -76,6 +77,8 @@
         }];
     }
 }
+
+
 
 - (void)overTurnAnimation
 {
@@ -190,6 +193,45 @@
             [cell.layer addAnimation:animation forKey:@"rotationYkey"];
         }];
     }
+}
+
+- (UITableViewCell *)roteAnimation:(UITableView *)tableview indexText:(NSIndexPath *)index{
+    
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.y"];
+    animation.fromValue = @(-M_PI);
+    animation.toValue = 0;
+    animation.duration = 0.3;
+    animation.removedOnCompletion = NO;
+    animation.repeatCount = 3;
+    animation.fillMode = kCAFillModeForwards;
+    animation.autoreverses = NO;
+    
+    static NSString *str = @"cell";
+    
+    UITableViewCell *cell=[tableview dequeueReusableCellWithIdentifier:str];
+    
+    if(cell==nil){
+        
+        
+        cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
+        
+        cell.textLabel.text = [NSString stringWithFormat:@"Test %ld",index.row];
+        
+        cell.backgroundColor = XMGRandomColor;
+        
+        cell.alpha = 0.0;
+        
+        [UIView animateWithDuration:0.1 delay: 0.25 options:0 animations:^{
+            cell.alpha = 1.0;
+    
+        } completion:^(BOOL finished) {
+            [cell.layer addAnimation:animation forKey:@"rotationYkey"];
+        }];
+        
+    }
+    
+    return cell;
+    
 }
 
 @end

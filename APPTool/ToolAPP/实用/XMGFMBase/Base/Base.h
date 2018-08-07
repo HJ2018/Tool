@@ -9,12 +9,6 @@
 #ifndef Base_h
 #define Base_h
 
-#define kBaseUrl @"http://mobile.ximalaya.com/"
-#define kLiveUrl @"http://live.ximalaya.com/"
-#define kAdUrl @"http://adse.ximalaya.com/"
-#define kAlbumUrl @"http://ar.ximalaya.com/"
-#define kHybridUrl @"http://hybrid.ximalaya.com/"
-
 // 如果是调试模式(DEBUG 是调试模式下, 自带的宏)
 #ifdef DEBUG
 #define XMGLog(...) NSLog(__VA_ARGS__);

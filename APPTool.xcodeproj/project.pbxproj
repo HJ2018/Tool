@@ -67,6 +67,7 @@
 		A954BE0E211948BD006A147F /* XRCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = A954BE0C211948BD006A147F /* XRCarouselView.m */; };
 		A954BE1021194D4D006A147F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A954BE0F21194D4D006A147F /* Assets.xcassets */; };
 		A954BE1F21195626006A147F /* UIBarButtonItem+HJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A954BE1D21195626006A147F /* UIBarButtonItem+HJExtension.m */; };
+		A954BE2F21196C91006A147F /* NavController.m in Sources */ = {isa = PBXBuildFile; fileRef = A954BE2E21196C91006A147F /* NavController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -189,6 +190,8 @@
 		A954BE0F21194D4D006A147F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A954BE1D21195626006A147F /* UIBarButtonItem+HJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+HJExtension.m"; sourceTree = "<group>"; };
 		A954BE1E21195626006A147F /* UIBarButtonItem+HJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+HJExtension.h"; sourceTree = "<group>"; };
+		A954BE2D21196C91006A147F /* NavController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavController.h; sourceTree = "<group>"; };
+		A954BE2E21196C91006A147F /* NavController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavController.m; sourceTree = "<group>"; };
 		ECC3A82D7302A7DF68AE8B99 /* Pods-APPTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APPTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-APPTool/Pods-APPTool.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -262,6 +265,7 @@
 				A954BE0821194870006A147F /* 简单好用的控件封装 */,
 				A954BE0721194032006A147F /* 实用 */,
 				A954BE0621194007006A147F /* GitHub */,
+				A954BE2C21196C20006A147F /* Controller */,
 			);
 			path = ToolAPP;
 			sourceTree = "<group>";
@@ -610,6 +614,15 @@
 			path = UIButton;
 			sourceTree = "<group>";
 		};
+		A954BE2C21196C20006A147F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A954BE2D21196C91006A147F /* NavController.h */,
+				A954BE2E21196C91006A147F /* NavController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -706,11 +719,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-APPTool/Pods-APPTool-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/WRNavigationBar/WRNavigationBar.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WRNavigationBar.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -727,6 +742,7 @@
 				A954BD3921192DE5006A147F /* UIImage+XMGImage.m in Sources */,
 				A954BDFE21193CEB006A147F /* NSAttributedString+Category.m in Sources */,
 				A954BDF021193CEB006A147F /* NSString+DisplayTime.m in Sources */,
+				A954BE2F21196C91006A147F /* NavController.m in Sources */,
 				A954BE0321193CEB006A147F /* NSArray+Category.m in Sources */,
 				A954BE0221193CEB006A147F /* NSMutableArray+Safe.m in Sources */,
 				A954BDF621193CEB006A147F /* UIMenuItem+Category.m in Sources */,
@@ -921,6 +937,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = APPTool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -938,6 +955,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = APPTool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6EBD149C122DE53078E77DBB01C209A4"
-               BlueprintName = "SDWebImage"
+               BlueprintIdentifier = "8BB8CAE5FC7769F3A7D49C4D324AAE3C"
+               BlueprintName = "WRNavigationBar"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "SDWebImage.framework">
+               BuildableName = "WRNavigationBar.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
