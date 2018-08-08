@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -44,15 +43,29 @@
                                     <constraint firstAttribute="height" constant="180" id="jmC-ce-OgS"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zE-5h-sW2">
+                                <rect key="frame" x="117" y="499" width="180" height="45"/>
+                                <color key="backgroundColor" red="1" green="0.66422661940000005" blue="0.56745036500000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="3n3-Td-xtd"/>
+                                    <constraint firstAttribute="width" constant="180" id="Fnk-wt-6gg"/>
+                                </constraints>
+                                <state key="normal" title="点击获取验证码"/>
+                                <connections>
+                                    <action selector="StartTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FAy-mj-37B"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="EvF-ua-l6z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="23e-Cx-MR2"/>
+                            <constraint firstItem="2zE-5h-sW2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bhw-R9-Lde"/>
                             <constraint firstAttribute="trailing" secondItem="EvF-ua-l6z" secondAttribute="trailing" id="PSM-mh-cnX"/>
                             <constraint firstItem="enc-df-Cx2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="STN-pU-UDn"/>
                             <constraint firstItem="EvF-ua-l6z" firstAttribute="top" secondItem="enc-df-Cx2" secondAttribute="bottom" constant="20" id="c6M-8K-9kf"/>
                             <constraint firstItem="Cbt-tQ-6HX" firstAttribute="top" secondItem="9B8-Qv-bsr" secondAttribute="bottom" id="gl8-49-PGI"/>
                             <constraint firstItem="enc-df-Cx2" firstAttribute="top" secondItem="Cbt-tQ-6HX" secondAttribute="bottom" constant="40" id="hbm-MW-3py"/>
+                            <constraint firstItem="2zE-5h-sW2" firstAttribute="top" secondItem="EvF-ua-l6z" secondAttribute="bottom" constant="40" id="sbZ-iy-bHY"/>
                             <constraint firstItem="Cbt-tQ-6HX" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="v2B-TV-NYb"/>
                             <constraint firstItem="Cbt-tQ-6HX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zN6-LR-cmU"/>
                         </constraints>
@@ -60,6 +73,7 @@
                     <navigationItem key="navigationItem" id="oFz-7L-wSN"/>
                     <connections>
                         <outlet property="AnimationView" destination="enc-df-Cx2" id="UMN-n0-BCX"/>
+                        <outlet property="TimeButton" destination="2zE-5h-sW2" id="WRb-Sw-o6b"/>
                         <outlet property="XRCarView" destination="EvF-ua-l6z" id="TRz-r4-gOf"/>
                         <outlet property="wssVIew" destination="Cbt-tQ-6HX" id="q6L-WN-E73"/>
                     </connections>

@@ -9,6 +9,10 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import  <WRNavigationBar/WRNavigationBar.h>
+#import "AppDelegate.h"
+#import "NavController.h"
+#import "JXGuideFigure.h"
+
 
 UIColor *MainNavBarColor = nil;
 UIColor *MainViewColor = nil;
@@ -22,6 +26,21 @@ UIColor *MainViewColor = nil;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+ 
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+
+    /**
+     一句话启动页引导图
+     */
+//    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+//    self.window.backgroundColor = [UIColor whiteColor];
+//    
+//    NavController *vc = [[NavController alloc] init];
+//    [JXGuideFigure figureWithImages:@[@"DHLaunchDfPageHUD",@"DHLaunchDfPageHUD",@"DHLaunchDfPageHUD",@"DHLaunchDfPageHUD"] finashMainViewController:vc];
+//    
+//    [self.window makeKeyAndVisible];
+//    
     
     MainNavBarColor = [UIColor colorWithRed:0/255.0 green:175/255.0 blue:240/255.0 alpha:1];
     MainViewColor   = [UIColor colorWithRed:126/255.0 green:126/255.0 blue:126/255.0 alpha:1];

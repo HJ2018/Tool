@@ -7,7 +7,8 @@ target 'APPTool' do
 
   pod 'SDWebImage'
   pod 'AFNetworking', '~> 3.2.1'
-   pod 'WRNavigationBar', '~> 1.2.0'
+  pod 'WRNavigationBar', '~> 1.2.0'
+  pod 'HHTransition', '~> 1.0'
   # Pods for APPTool
 
 end
