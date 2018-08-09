@@ -31,6 +31,10 @@
 #define kScreenWidth [[UIScreen mainScreen] bounds].size.width
 #define kScreenHeight [[UIScreen mainScreen] bounds].size.height
 
+
+#define XS_SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
+#define XS_SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
+
 // 弱引用
 #define kWeakSelf __weak typeof(self) weakSelf = self;
 

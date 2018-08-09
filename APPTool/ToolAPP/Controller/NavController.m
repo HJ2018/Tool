@@ -11,6 +11,8 @@
 #import "UITableView+CellAnimation.h"
 #import "Base.h"
 
+
+
 #define NAVBAR_COLORCHANGE_POINT -80
 #define IMAGE_HEIGHT 260
 #define SCROLL_DOWN_LIMIT 100
@@ -19,15 +21,23 @@
 
 @property (nonatomic, strong) UIImageView *imgView;
 
+ @property (nonatomic,strong) NSArray *arry;
+
 
 @end
 
 @implementation NavController
 
+
+static NSString *cellid = @"cellid";
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     
+    
+    
+    self.arry = [NSArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12",@"13",@"14",@"15",@"16",@"17",@"18",@"19",@"20", nil];
     
     self.title = @"NAVTEST";
     
@@ -40,6 +50,9 @@
     [self.tableView addSubview:self.imgView];
     
     [self wr_setNavBarBackgroundAlpha:0];
+    
+//     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellid];
+    
     
     
 }
@@ -90,29 +103,50 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return 10;
+    return self.arry.count;
 }
+
+
+
+//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if (indexPath.row%2 == 0) {
+//        cell.transform = CGAffineTransformMakeTranslation(-XS_SCREEN_WIDTH,0);
+//    }else {
+//        cell.transform = CGAffineTransformMakeTranslation(XS_SCREEN_WIDTH,0);
+//    }
+//    [UIView animateWithDuration:0.4 delay:indexPath.row*0.03 usingSpringWithDamping:0.75 initialSpringVelocity:1/0.75 options:0 animations:^{
+//        cell.transform = CGAffineTransformIdentity;
+//    } completion:^(BOOL finished) {
+//
+//    }];
+//
+//}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    /**
-     这个地方有BUG  后期处理
-     */
-    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:[NSString stringWithFormat:@"%ld",indexPath.row]];
+
+    
+    static NSString *rid=@"Cellid";
+    
+    UITableViewCell *cell=[self.tableView dequeueReusableCellWithIdentifier:rid];
     
     if(cell==nil){
         
-        cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:[NSString stringWithFormat:@"%ld",indexPath.row]];
-        
-        cell.textLabel.text = [NSString stringWithFormat:@"Test ------> %ld",indexPath.row];
-        
-        cell.backgroundColor = XMGRandomColor;
+        cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:rid];
         
     }
+    
+    cell.backgroundColor =XMGRandomColor;
+    
+    cell.textLabel.text = self.arry[indexPath.row];
+    
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Test------>%ld",indexPath.row];
     
     return cell;
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-    
+
      [self.tableView shakeAnimation];
 }
 
