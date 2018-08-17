@@ -16,7 +16,7 @@
 #define NAVBAR_COLORCHANGE_POINT -80
 #define IMAGE_HEIGHT 260
 #define SCROLL_DOWN_LIMIT 100
-#define LIMIT_OFFSET_Y -(IMAGE_HEIGHT + SCROLL_DOWN_LIMIT)
+#define LIMIT_OFFSET_Y -(IMAGE_HEIGHT + SCROLL_DOWN_LIMIT + 100)
 @interface NavController ()
 
 @property (nonatomic, strong) UIImageView *imgView;
@@ -108,20 +108,21 @@ static NSString *cellid = @"cellid";
 
 
 
-//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    if (indexPath.row%2 == 0) {
-//        cell.transform = CGAffineTransformMakeTranslation(-XS_SCREEN_WIDTH,0);
-//    }else {
-//        cell.transform = CGAffineTransformMakeTranslation(XS_SCREEN_WIDTH,0);
-//    }
-//    [UIView animateWithDuration:0.4 delay:indexPath.row*0.03 usingSpringWithDamping:0.75 initialSpringVelocity:1/0.75 options:0 animations:^{
-//        cell.transform = CGAffineTransformIdentity;
-//    } completion:^(BOOL finished) {
-//
-//    }];
-//
-//}
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if (indexPath.row%2 == 0) {
+        cell.transform = CGAffineTransformMakeTranslation(-XS_SCREEN_WIDTH,0);
+    }else {
+        cell.transform = CGAffineTransformMakeTranslation(XS_SCREEN_WIDTH,0);
+    }
+    [UIView animateWithDuration:0.4 delay:indexPath.row*0.03 usingSpringWithDamping:0.75 initialSpringVelocity:1/0.75 options:0 animations:^{
+        cell.transform = CGAffineTransformIdentity;
+    } completion:^(BOOL finished) {
+
+    }];
+    
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
@@ -145,10 +146,10 @@ static NSString *cellid = @"cellid";
     return cell;
 }
 
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-
-     [self.tableView shakeAnimation];
-}
+//- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+//
+//     [self.tableView roteAnimation];
+//}
 
 - (UIImageView *)imgView
 {
