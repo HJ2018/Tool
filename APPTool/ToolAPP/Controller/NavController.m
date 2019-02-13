@@ -9,7 +9,36 @@
 #import "NavController.h"
 #import <WRNavigationBar/WRNavigationBar.h>
 #import "UITableView+CellAnimation.h"
+#import "UIView+Frame.h"
 #import "Base.h"
+
+@interface  ExampleCell : UITableViewCell
+
+@end
+
+
+@implementation ExampleCell
+
+
+
+//- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+//    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+//    return self;
+//}
+
+//-(void)setFrame:(CGRect)frame
+//{
+//    frame.origin.x = 5;
+//    //    frame.origin.y = 5;
+//    frame.size.width -= 2 * frame.origin.x;
+//    frame.size.height -= 10;
+//
+//    [super setFrame:frame];
+//}
+
+
+@end
+
 
 
 
@@ -27,6 +56,8 @@
 @end
 
 @implementation NavController
+
+
 
 
 static NSString *cellid = @"cellid";
@@ -59,6 +90,7 @@ static NSString *cellid = @"cellid";
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+    
     CGFloat offsetY = scrollView.contentOffset.y;
     
     if (offsetY > NAVBAR_COLORCHANGE_POINT)
@@ -82,6 +114,20 @@ static NSString *cellid = @"cellid";
     {
         self.imgView.frame = CGRectMake(0, newOffsetY, kScreenWidth, -newOffsetY);
     }
+    
+//    CGFloat viewHeight = scrollView.height + scrollView.contentInset.top;
+//    for (UITableViewCell *cell in [self.tableView visibleCells]) {
+//        CGFloat y = cell.centerY - scrollView.contentOffset.y;
+//        CGFloat p = y - viewHeight / 2;
+//        CGFloat scale = cos(p / viewHeight * 0.8) * 0.95;
+//        if (@available(iOS 8.0, *)){
+//            [UIView animateWithDuration:0.15 delay:0 options:UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionBeginFromCurrentState animations:^{
+//                cell.transform = CGAffineTransformMakeScale(scale, scale);
+//            } completion:NULL];
+//        } else {
+//            cell.transform = CGAffineTransformMakeScale(scale, scale);
+//        }
+//    }
 }
 
 
@@ -107,10 +153,17 @@ static NSString *cellid = @"cellid";
 }
 
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    return 100;
+}
+
+
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+
     if (indexPath.row%2 == 0) {
         cell.transform = CGAffineTransformMakeTranslation(-XS_SCREEN_WIDTH,0);
     }else {
@@ -121,19 +174,25 @@ static NSString *cellid = @"cellid";
     } completion:^(BOOL finished) {
 
     }];
-    
+
 }
+
+
+- (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
+    return NO;
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
     
     static NSString *rid=@"Cellid";
     
-    UITableViewCell *cell=[self.tableView dequeueReusableCellWithIdentifier:rid];
+    ExampleCell *cell=[self.tableView dequeueReusableCellWithIdentifier:rid];
     
     if(cell==nil){
         
-        cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:rid];
+        cell=[[ExampleCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:rid];
         
     }
     
@@ -173,3 +232,4 @@ static NSString *cellid = @"cellid";
 
 
 @end
+

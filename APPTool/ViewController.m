@@ -14,6 +14,9 @@
 #import "Base.h"
 #import "NSObject+CountDown.h"
 #import "UIViewController+HHTransition.h"
+#import "NSMutableAttributedString+Emoji.h"
+
+#define kScreenW [UIScreen mainScreen].bounds.size.width
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet WSStarRatingView *wssVIew;
@@ -30,6 +33,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     
+//    [[self.view subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(Next)];
     
     /**
@@ -44,6 +48,14 @@
           [self.AnimationView trans180DegreeAnimation];
        
     });
+    
+    
+    
+    CGSize textMaxSize = CGSizeMake(kScreenW - 50, MAXFLOAT);
+    CGFloat height = [[NSMutableAttributedString returnKeepingStrWithText:@"Test height" Font:14] boundingRectWithSize:textMaxSize options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:nil].size.height;
+    
+    NSLog(@"%f",height);
+    
     
     
     [self photos];
