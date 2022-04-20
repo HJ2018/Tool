@@ -15,7 +15,8 @@
 #import "NSObject+CountDown.h"
 #import "UIViewController+HHTransition.h"
 #import "NSMutableAttributedString+Emoji.h"
-
+#import "EncryptionTools.h"
+#import "DES.h"
 #define kScreenW [UIScreen mainScreen].bounds.size.width
 
 @interface ViewController ()
@@ -32,6 +33,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+
+//    NSString *str = [[EncryptionTools sharedEncryptionTools]
+//                     decryptAES:@"AT7Fwb97kRmp2ARkkADJqYTLYwGyZg1tSvM3UR73EsQuT0pRRsLgkZhBFBi1Fq5R" key:@"000001514840107708661762"];
+//                    decryptString:@"AT7Fwb97kRmp2ARkkADJqYTLYwGyZg1tSvM3UR73EsQuT0pRRsLgkZhBFBi1Fq5R" keyString:@"000001514840107708661762" iv:NULL];
+//    NSData *contentData = [[NSData alloc] initWithBase64EncodedString:@"AT7Fwb97kRmp2ARkkADJqYTLYwGyZg1tSvM3UR73EsQuT0pRRsLgkZhBFBi1Fq5R" options:NSDataBase64DecodingIgnoreUnknownCharacters];
+//    NSData *data = [DES decryptDataECB:contentData key:@"000001514840107708661762"];
+//
+//    NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSString *str = [DES decryptDataECB:@"AT7Fwb97kRmp2ARkkADJqYTLYwGyZg1tSvM3UR73EsQuT0pRRsLgkZhBFBi1Fq5R" key:@"000001514840107708661762"];
+    NSLog(@"=====%@",str);
     
 //    [[self.view subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(Next)];

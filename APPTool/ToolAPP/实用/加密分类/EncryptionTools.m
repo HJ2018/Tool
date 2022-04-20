@@ -160,4 +160,43 @@
     return [[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding];
 }
 
+
+-(NSString *)decryptAES:(NSString *)content key:(NSString *)key{
+   
+    //为结束符'\0' +1
+    char keyPtr[[key length]+1];//kCCKeySizeAES128,kCCKeySizeAES256
+    memset(keyPtr, 0, sizeof(keyPtr));
+    [key getCString:keyPtr maxLength:sizeof(keyPtr) encoding:NSUTF8StringEncoding];
+ 
+    //1，string转Data Base64解密（系统方法）
+    NSData *contentData = [[NSData alloc]initWithBase64EncodedString:content options:0];
+    NSUInteger contentDataLength = [contentData length];
+    //密文长度 <= 明文程度 + BlockSize
+    size_t bufferSize = contentDataLength + kCCBlockSizeAES128;//key：16位
+    void *buffer = malloc(bufferSize);
+    size_t numBytesDecrypted = 0;
+    CCCryptorStatus cryptStatus = CCCrypt(kCCDecrypt,
+                                          kCCAlgorithmAES,
+                                          kCCOptionPKCS7Padding | kCCOptionECBMode,//ECB
+                                          keyPtr,//key
+                                          [key length],//key.length=16（kCCBlockSizeAES128）
+                                          NULL,//ECB时iv为空
+                                          contentData.bytes,
+                                          contentDataLength,
+                                          buffer,
+                                          bufferSize,
+                                          &numBytesDecrypted);
+    if (cryptStatus == kCCSuccess) {
+        //2，Data转Data 解密
+        NSData *dataOut = [NSData dataWithBytesNoCopy:buffer length:numBytesDecrypted];
+        //3，Data转string UTF8
+        NSString *decryptStr = [[NSString alloc] initWithData:dataOut encoding:NSUTF8StringEncoding];
+        return decryptStr;
+    }
+    free(buffer);
+    return nil;
+}
+
+
+
 @end

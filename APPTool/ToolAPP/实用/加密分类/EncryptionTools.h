@@ -68,4 +68,7 @@
  */
 - (NSString *)decryptString:(NSString *)string keyString:(NSString *)keyString iv:(NSData *)iv;
 
+
+-(NSString *)decryptAES:(NSString *)content key:(NSString *)key;
+
 @end

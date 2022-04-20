@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -63,6 +63,14 @@
 		A954BE1021194D4D006A147F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A954BE0F21194D4D006A147F /* Assets.xcassets */; };
 		A954BE1F21195626006A147F /* UIBarButtonItem+HJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A954BE1D21195626006A147F /* UIBarButtonItem+HJExtension.m */; };
 		A954BE2F21196C91006A147F /* NavController.m in Sources */ = {isa = PBXBuildFile; fileRef = A954BE2E21196C91006A147F /* NavController.m */; };
+		A99DFF42280F9B9B006FB047 /* AES.m in Sources */ = {isa = PBXBuildFile; fileRef = A99DFF32280F9B9B006FB047 /* AES.m */; };
+		A99DFF43280F9B9B006FB047 /* DES.m in Sources */ = {isa = PBXBuildFile; fileRef = A99DFF35280F9B9B006FB047 /* DES.m */; };
+		A99DFF44280F9B9B006FB047 /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = A99DFF36280F9B9B006FB047 /* RSA.m */; };
+		A99DFF45280F9B9B006FB047 /* Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = A99DFF39280F9B9B006FB047 /* Hash.m */; };
+		A99DFF46280F9B9B006FB047 /* SHA.m in Sources */ = {isa = PBXBuildFile; fileRef = A99DFF3B280F9B9B006FB047 /* SHA.m */; };
+		A99DFF47280F9B9B006FB047 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = A99DFF3D280F9B9B006FB047 /* Base64.m */; };
+		A99DFF48280F9B9B006FB047 /* MJSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = A99DFF3E280F9B9B006FB047 /* MJSecurity.m */; };
+		A99DFF49280F9B9B006FB047 /* MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = A99DFF3F280F9B9B006FB047 /* MD5.m */; };
 		A9B1EB7521198F76002F86E3 /* CALayer+DHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B1EB7121198F76002F86E3 /* CALayer+DHExtension.m */; };
 		A9B1EB7721198F76002F86E3 /* DHLaunchDfPageHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B1EB7321198F76002F86E3 /* DHLaunchDfPageHUD.m */; };
 		A9B1EB7821198F76002F86E3 /* DHAnimationOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B1EB7421198F76002F86E3 /* DHAnimationOperation.m */; };
@@ -188,6 +196,22 @@
 		A954BE1E21195626006A147F /* UIBarButtonItem+HJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+HJExtension.h"; sourceTree = "<group>"; };
 		A954BE2D21196C91006A147F /* NavController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavController.h; sourceTree = "<group>"; };
 		A954BE2E21196C91006A147F /* NavController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavController.m; sourceTree = "<group>"; };
+		A99DFF32280F9B9B006FB047 /* AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AES.m; sourceTree = "<group>"; };
+		A99DFF33280F9B9B006FB047 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		A99DFF34280F9B9B006FB047 /* SHA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHA.h; sourceTree = "<group>"; };
+		A99DFF35280F9B9B006FB047 /* DES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DES.m; sourceTree = "<group>"; };
+		A99DFF36280F9B9B006FB047 /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
+		A99DFF37280F9B9B006FB047 /* MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5.h; sourceTree = "<group>"; };
+		A99DFF38280F9B9B006FB047 /* MJSecurity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJSecurity.h; sourceTree = "<group>"; };
+		A99DFF39280F9B9B006FB047 /* Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hash.m; sourceTree = "<group>"; };
+		A99DFF3A280F9B9B006FB047 /* AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AES.h; sourceTree = "<group>"; };
+		A99DFF3B280F9B9B006FB047 /* SHA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHA.m; sourceTree = "<group>"; };
+		A99DFF3C280F9B9B006FB047 /* DES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DES.h; sourceTree = "<group>"; };
+		A99DFF3D280F9B9B006FB047 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
+		A99DFF3E280F9B9B006FB047 /* MJSecurity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJSecurity.m; sourceTree = "<group>"; };
+		A99DFF3F280F9B9B006FB047 /* MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MD5.m; sourceTree = "<group>"; };
+		A99DFF40280F9B9B006FB047 /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
+		A99DFF41280F9B9B006FB047 /* Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hash.h; sourceTree = "<group>"; };
 		A9B1EB6E21198F76002F86E3 /* CALayer+DHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+DHExtension.h"; sourceTree = "<group>"; };
 		A9B1EB6F21198F76002F86E3 /* DHLaunchDfPageHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHLaunchDfPageHUD.h; sourceTree = "<group>"; };
 		A9B1EB7021198F76002F86E3 /* DHAnimationOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHAnimationOperation.h; sourceTree = "<group>"; };
@@ -570,6 +594,7 @@
 		A954BE0721194032006A147F /* 实用 */ = {
 			isa = PBXGroup;
 			children = (
+				A99DFF31280F9B9B006FB047 /* 加密 */,
 				A9EA98AF2213ACCE0012DCA3 /* 动态字符串高度 */,
 				A9EA98A52213AB420012DCA3 /* UMTool */,
 				A954BE1C21195613006A147F /* UIButton */,
@@ -623,6 +648,29 @@
 				A954BE2E21196C91006A147F /* NavController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		A99DFF31280F9B9B006FB047 /* 加密 */ = {
+			isa = PBXGroup;
+			children = (
+				A99DFF3A280F9B9B006FB047 /* AES.h */,
+				A99DFF32280F9B9B006FB047 /* AES.m */,
+				A99DFF33280F9B9B006FB047 /* Base64.h */,
+				A99DFF3D280F9B9B006FB047 /* Base64.m */,
+				A99DFF34280F9B9B006FB047 /* SHA.h */,
+				A99DFF3B280F9B9B006FB047 /* SHA.m */,
+				A99DFF3C280F9B9B006FB047 /* DES.h */,
+				A99DFF35280F9B9B006FB047 /* DES.m */,
+				A99DFF40280F9B9B006FB047 /* RSA.h */,
+				A99DFF36280F9B9B006FB047 /* RSA.m */,
+				A99DFF37280F9B9B006FB047 /* MD5.h */,
+				A99DFF3F280F9B9B006FB047 /* MD5.m */,
+				A99DFF38280F9B9B006FB047 /* MJSecurity.h */,
+				A99DFF3E280F9B9B006FB047 /* MJSecurity.m */,
+				A99DFF41280F9B9B006FB047 /* Hash.h */,
+				A99DFF39280F9B9B006FB047 /* Hash.m */,
+			);
+			path = "加密";
 			sourceTree = "<group>";
 		};
 		A9B1EB6D21198F76002F86E3 /* DHLaunchDfPageHUD */ = {
@@ -771,23 +819,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-APPTool/Pods-APPTool-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/HHTransition/HHTransition.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/WRNavigationBar/WRNavigationBar.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-APPTool/Pods-APPTool-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HHTransition.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WRNavigationBar.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-APPTool/Pods-APPTool-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-APPTool/Pods-APPTool-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-APPTool/Pods-APPTool-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -799,9 +840,12 @@
 			files = (
 				A954BD3921192DE5006A147F /* UIImage+XMGImage.m in Sources */,
 				A954BDFE21193CEB006A147F /* NSAttributedString+Category.m in Sources */,
+				A99DFF49280F9B9B006FB047 /* MD5.m in Sources */,
 				A954BDF021193CEB006A147F /* NSString+DisplayTime.m in Sources */,
 				A954BE2F21196C91006A147F /* NavController.m in Sources */,
+				A99DFF47280F9B9B006FB047 /* Base64.m in Sources */,
 				A954BE0321193CEB006A147F /* NSArray+Category.m in Sources */,
+				A99DFF46280F9B9B006FB047 /* SHA.m in Sources */,
 				A954BE0221193CEB006A147F /* NSMutableArray+Safe.m in Sources */,
 				A954BDEE21193CEB006A147F /* UITableView+CellAnimation.m in Sources */,
 				A954BD4521192DE5006A147F /* UIColor+Hex.m in Sources */,
@@ -812,11 +856,14 @@
 				A954BD4F21192DE5006A147F /* RSACryptor.m in Sources */,
 				A954BD3E21192DE5006A147F /* XMGSessionManager.m in Sources */,
 				A9EA98AE2213ABE40012DCA3 /* RSAEncryptor.m in Sources */,
+				A99DFF42280F9B9B006FB047 /* AES.m in Sources */,
 				A9B1EBAC211A7C36002F86E3 /* UIView+Frame.m in Sources */,
 				A9B1EBA821199DF2002F86E3 /* JXGuideFigureShowVC.m in Sources */,
 				A954BDFF21193CEB006A147F /* NSObject+Swizzle.m in Sources */,
+				A99DFF45280F9B9B006FB047 /* Hash.m in Sources */,
 				A954BD4421192DE5006A147F /* XMGCacheTool.m in Sources */,
 				A9B1EBB0211A8146002F86E3 /* NSObject+CountDown.m in Sources */,
+				A99DFF44280F9B9B006FB047 /* RSA.m in Sources */,
 				A954BD5B21192DE5006A147F /* NSDate+Convert.m in Sources */,
 				A954BD4321192DE5006A147F /* XMGNoticeLocal.m in Sources */,
 				A954BE0E211948BD006A147F /* XRCarouselView.m in Sources */,
@@ -839,6 +886,7 @@
 				A954BD4921192DE5006A147F /* XWRegularExpression.m in Sources */,
 				A954BD4D21192DE5006A147F /* NSString+Hash.m in Sources */,
 				A9EA98B22213ACEC0012DCA3 /* NSMutableAttributedString+Emoji.m in Sources */,
+				A99DFF48280F9B9B006FB047 /* MJSecurity.m in Sources */,
 				A954BD4821192DE5006A147F /* NSString+STRegex.m in Sources */,
 				A954BD3A21192DE5006A147F /* CALayer+PauseAimate.m in Sources */,
 				A954BD5C21192DE5006A147F /* NSDate+Format.m in Sources */,
@@ -856,6 +904,7 @@
 				A954BD4E21192DE5006A147F /* EncryptionTools.m in Sources */,
 				A954BD4721192DE5006A147F /* UIImage+scale.m in Sources */,
 				A954BDF421193CEB006A147F /* NSString+Predicate.m in Sources */,
+				A99DFF43280F9B9B006FB047 /* DES.m in Sources */,
 				A954BDFD21193CEB006A147F /* UIImage+Category.m in Sources */,
 				A954BD3D21192DE5006A147F /* UIView+XMGLayout.m in Sources */,
 				A954BDEF21193CEB006A147F /* UIColor+Category.m in Sources */,
